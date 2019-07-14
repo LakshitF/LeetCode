@@ -16,7 +16,7 @@ public:
             }
         }
 
-        const vector<pair<int, int>> dirs = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
+        vector<pair<int, int>> dirs = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
         while (!queue.empty()) {
             auto cell = queue.front();
             queue.pop();
@@ -46,8 +46,10 @@ public:
                                 vector<int>(matrix[0].size(),
                                             numeric_limits<int>::max() - 10000));
 
-        for (int i = 0; i < matrix.size(); ++i) {
-            for (int j = 0; j < matrix[i].size(); ++j) {
+        for (int i = 0; i < matrix.size(); ++i) 
+        {
+            for (int j = 0; j < matrix[i].size(); ++j) 
+            {
                 if (matrix[i][j] == 0) {
                     dp[i][j] = 0;
                 } else {
